@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CRUD</h1>
+    <h2>SYSTEME DE GESTION DE PRODUITS</h2>
+    <div class="form-container">
+        <input id="title" type="text" placeholder="titre">
+        <div style="display: flex; gap: 10px;">
+            <input id="price" type="number" placeholder="prix">
+            <input id="tva" type="number" placeholder="tva">
+            <input id="ads" type="number" placeholder="ads">
+            <input id="discount" type="number" placeholder="reduction">
+            <div id="total" class="total">Total :</div>
+        </div>
+        <input id="count" type="number" placeholder="compte">
+        <input id="category" type="text" placeholder="categorie">
+        <button id="reset" class="reset">Reset</button>
+        <button id="create" class="create">Creer</button>
+        <input id="search" type="text" placeholder="rechercher">
+        <div class="search-buttons">
+            <button onclick="searchBy('title')">Rechercher par titre</button>
+            <button onclick="searchBy('category')">Rechercher par categorie</button>
+        </div>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TITRE</th>
+                <th>PRIX</th>
+                <th>TVA</th>
+                <th>ADS</th>
+                <th>REDUCTION</th>
+                <th>CATEGORIE</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+        </thead>
+        <tbody id="productTable">
+        </tbody>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
